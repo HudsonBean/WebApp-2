@@ -1,4 +1,4 @@
-GET http://localhost:8080/dev
+GET http://localhost:8080/dev/all
 
 ###
 
@@ -6,5 +6,17 @@ POST http://localhost:8080/dev/new
 Content-Type: application/json
 
 {
-    "message": "Second test using routing!"
+    "message": "Test using routing!"
 }
+
+###
+
+GET http://localhost:8080/dev/3
+
+###
+
+DELETE http://localhost:8080/dev/0/delete
+
+###
+
+DELETE http://localhost:8080/dev/delete/all
