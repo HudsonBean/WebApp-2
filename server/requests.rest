@@ -1,1 +1,10 @@
 GET http://localhost:8080/dev
+
+###
+
+POST http://localhost:8080/dev/new
+Content-Type: application/json
+
+{
+    "message": "Second test using routing!"
+}

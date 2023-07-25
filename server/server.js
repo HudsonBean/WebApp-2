@@ -38,3 +38,14 @@ app.get("/dev", async (req, res) => {
 
   res.json(data);
 });
+app.post("/dev/new", async (req, res) => {
+  //New id
+  const id = (await dev.findOne().sort({ _id: -1 }).limit(1)).get("id") + 1;
+  //Create data
+  const data = new dev({
+    id: id,
+    message: req.body.message,
+  });
+  data.save();
+  res.status(202).json(data);
+});
